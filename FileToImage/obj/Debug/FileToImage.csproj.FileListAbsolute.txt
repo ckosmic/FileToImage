@@ -1,0 +1,10 @@
+C:\Users\chris\source\repos\FileToImage\FileToImage\bin\Debug\FileToImage.exe.config
+C:\Users\chris\source\repos\FileToImage\FileToImage\bin\Debug\FileToImage.exe
+C:\Users\chris\source\repos\FileToImage\FileToImage\bin\Debug\FileToImage.pdb
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.csprojAssemblyReference.cache
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.Properties.Resources.resources
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.csproj.GenerateResource.cache
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.exe
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.pdb
+C:\Users\chris\source\repos\FileToImage\FileToImage\obj\Debug\FileToImage.Form1.resources
