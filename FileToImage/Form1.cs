@@ -34,6 +34,8 @@ namespace FileToImage {
 		}
 
 		public void CreateImage(string fileName) {
+			Console.WriteLine("Generating image...");
+
 			imageSamples = (int)numericUpDown1.Value;
 
 			imageSamples *= 2;
@@ -56,10 +58,8 @@ namespace FileToImage {
 				progressBar1.Value = 100 * (i+1) / imageSamples;
 				using (WebClient wc = new WebClient()) {
 					int width = sampleBytes[i * 2];
-					//if (width % 2 == 1) width += 1;
 					int height = sampleBytes[i * 2 + 1];
-					//if (height % 2 == 1) height += 1;
-					Console.WriteLine(width + "x" + height);
+					Console.WriteLine("Getting image with size: " + width + "x" + height);
 					byte[] imgBytes = wc.DownloadData("https://picsum.photos/" + width + "/" + height);
 
 
@@ -164,27 +164,31 @@ namespace FileToImage {
 		}
 
 		private void button3_Click(object sender, EventArgs e) {
-			SaveFileDialog sfd = new SaveFileDialog();
-			sfd.Filter = "PNG Image|*.png|JPG Image|*.jpg|BMP Image|*.bmp";
-			sfd.Title = "Save Generated Image";
-			sfd.ShowDialog();
+			if (pictureBox1.Image != null) {
+				SaveFileDialog sfd = new SaveFileDialog();
+				sfd.Filter = "PNG Image|*.png|JPG Image|*.jpg|BMP Image|*.bmp";
+				sfd.Title = "Save Generated Image";
+				sfd.ShowDialog();
 
-			if (sfd.FileName != "") {
-				FileStream fs = (FileStream)sfd.OpenFile();
+				if (sfd.FileName != "") {
+					FileStream fs = (FileStream)sfd.OpenFile();
 
-				switch (sfd.FilterIndex) {
-					case 1:
-						pictureBox1.Image.Save(fs, ImageFormat.Png);
-						break;
-					case 2:
-						pictureBox1.Image.Save(fs, ImageFormat.Jpeg);
-						break;
-					case 3:
-						pictureBox1.Image.Save(fs, ImageFormat.Bmp);
-						break;
+					switch (sfd.FilterIndex) {
+						case 1:
+							pictureBox1.Image.Save(fs, ImageFormat.Png);
+							break;
+						case 2:
+							pictureBox1.Image.Save(fs, ImageFormat.Jpeg);
+							break;
+						case 3:
+							pictureBox1.Image.Save(fs, ImageFormat.Bmp);
+							break;
+					}
+
+					fs.Close();
 				}
-
-				fs.Close();
+			} else {
+				Console.WriteLine("No image has been generated, no image to save.");
 			}
 		}
 	}

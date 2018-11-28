@@ -23,6 +23,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.button1 = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
 			this.progressBar1 = new System.Windows.Forms.ProgressBar();
+			this.label6 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -197,17 +199,28 @@
 			this.progressBar1.TabIndex = 6;
 			this.progressBar1.Value = 100;
 			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(413, 478);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(121, 13);
+			this.label6.TabIndex = 7;
+			this.label6.Text = "Christian Kosman - 2018";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(545, 503);
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.progressBar1);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.panel1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
 			this.Text = "File To Image";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -235,6 +248,7 @@
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.ProgressBar progressBar1;
+		private System.Windows.Forms.Label label6;
 	}
 }
 
